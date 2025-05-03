@@ -68,8 +68,8 @@ public class CompanyService {
     public void sendOffer(ApplyEntity applyEntity) {
 
         OfferEntity offerEntity = new OfferEntity();
-        offerEntity.setStudentEntity(offerEntity.getStudentEntity());
-        offerEntity.setCompanyEntity(offerEntity.getCompanyEntity());
+        offerEntity.setStudentEntity(applyEntity.getStudentEntity());
+        offerEntity.setCompanyEntity(applyEntity.getCompanyEntity());
         offerEntity.setHrEntity(hrRepository.findByCompanyEntity(applyEntity.getCompanyEntity()));
         offerEntity.setInternEntity(applyEntity.getInternEntity());
         offerEntity.setDate( new Date());
